@@ -18,11 +18,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;margin:0}
 a{color:inherit}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
-.bar{max-width:920px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.bar{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .logo{font-family:Fraunces,Georgia,serif;font-weight:600;text-decoration:none}
 nav{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}
 nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--pink-d)}
-section{max-width:920px;margin:0 auto;padding:64px 20px 8px}
+section{max-width:1080px;margin:0 auto;padding:64px 20px 8px}
 h2{font-size:32px;margin-bottom:22px}
 .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;padding-top:56px;animation:rise .8s ease both}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
@@ -60,7 +60,8 @@ details.proj[open] summary::after{transform:rotate(45deg)}
 summary:focus-visible{outline:3px solid var(--sky-d);outline-offset:3px;border-radius:14px}
 .landing{max-width:1080px;min-height:calc(100svh - 56px);display:flex;flex-direction:column;justify-content:center;padding-top:28px;padding-bottom:20px}
 .landing-in{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
-.landing h1{font-size:clamp(44px,8vw,88px);line-height:1.02;letter-spacing:-.015em}
+.landing h1{font-size:clamp(28px,7.2vw,46px);font-size:clamp(26px,8.6cqw,60px);line-height:1.05;letter-spacing:-.015em;white-space:nowrap}
+.copy{container-type:inline-size}
 .loc{margin:0 0 16px;color:var(--muted);font-size:15px;letter-spacing:.02em}
 .role{font-family:Fraunces,Georgia,serif;font-size:clamp(20px,2.6vw,28px);color:var(--pink-d);margin:16px 0 0}
 .landing .lead{max-width:32em;margin:16px 0 22px}
@@ -109,7 +110,7 @@ header{animation:fade 1.4s ease both}
 @media (prefers-reduced-motion:reduce){#skills.in .chips span,#contact.in .btns .btn{animation:none}}
 .copy>.role{animation:none}
 .role .l{white-space:pre;opacity:0;animation:typed .01s linear forwards;animation-delay:calc(1.3s + var(--i)*.05s)}
-.caret{display:inline-block;width:2px;height:1em;background:var(--pink-d);margin-left:3px;vertical-align:-.12em;opacity:0;animation:caret .8s steps(1,end) 1.3s 6 forwards}
+.caret{display:inline-block;width:2px;height:1em;background:var(--pink-d);margin-left:3px;vertical-align:-.12em;opacity:0;animation:caret .5s steps(1,end) 1.3s 4 forwards}
 @keyframes typed{to{opacity:1}}
 @keyframes caret{0%,49%{opacity:1}50%,100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.role .l{opacity:1;animation:none}.caret{display:none}}
@@ -125,7 +126,7 @@ details.proj[open]::details-content{block-size:auto}
 .chips span{background:var(--sky);color:var(--sky-d);border-radius:999px;padding:7px 16px;font-weight:600;font-size:15px}
 .chips span.b{background:var(--surface);color:var(--text)}
 .contact p{max-width:34em;margin:0 0 18px}
-footer{max-width:920px;margin:56px auto 0;padding:22px 20px 30px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer{max-width:1080px;margin:56px auto 0;padding:22px 20px 30px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 </style>
 </head>
 <body>
