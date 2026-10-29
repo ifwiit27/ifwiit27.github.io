@@ -36,7 +36,8 @@ h1{font-size:clamp(40px,7vw,64px);letter-spacing:-.01em}
 .photo{aspect-ratio:1;max-width:300px;width:100%;justify-self:center;background:var(--pink);border-radius:58% 42% 55% 45%/48% 56% 44% 52%;display:grid;place-items:center;font:600 72px Fraunces,Georgia,serif;color:var(--pink-d);box-shadow:14px 14px 0 var(--sky);overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;display:block}
 @media (max-width:700px){.hero{grid-template-columns:1fr}.photo{order:-1;max-width:210px;font-size:54px}}
 .about p{max-width:38em;margin:0 0 14px}
-.tl{border-left:3px solid var(--pink);margin-left:6px}
+.tl{position:relative;padding-left:3px;margin-left:6px}
+.tl::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--pink);transform-origin:top}
 .job{position:relative;padding:0 0 30px 26px}
 .job::before{content:"";position:absolute;left:-10px;top:7px;width:17px;height:17px;border-radius:50%;background:var(--sky);border:3px solid var(--pink-d)}
 .job h3{font-size:21px}.meta{color:var(--muted);font-size:15px;margin:2px 0 8px}
@@ -110,9 +111,10 @@ header{animation:fade 1.4s ease both}
 @media (prefers-reduced-motion:reduce){#skills.in .chips span,#contact.in .btns .btn{animation:none}}
 .copy>.role{animation:none}
 .role .l{white-space:pre;opacity:0;animation:typed .01s linear forwards;animation-delay:calc(1.3s + var(--i)*.05s)}
-.caret{display:inline-block;width:2px;height:1em;background:var(--pink-d);margin-left:3px;vertical-align:-.12em;opacity:0;animation:caret .5s steps(1,end) 1.3s 4 forwards}
+.caret{display:inline-block;width:2px;height:1em;background:var(--pink-d);margin-left:3px;vertical-align:-.12em;opacity:0;animation:caret 1s ease-in-out 1.3s 2,caretout .5s ease 3.3s forwards}
 @keyframes typed{to{opacity:1}}
-@keyframes caret{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes caret{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes caretout{from{opacity:1}to{opacity:0}}
 @media (prefers-reduced-motion:reduce){.role .l{opacity:1;animation:none}.caret{display:none}}
 @keyframes boxin{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes reveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
@@ -122,6 +124,18 @@ details.proj[open] .pbody{animation:reveal .5s cubic-bezier(.22,.61,.36,1)}
 details.proj::details-content{block-size:0;overflow:hidden;transition:block-size .45s cubic-bezier(.22,.61,.36,1),content-visibility .45s allow-discrete}
 details.proj[open]::details-content{block-size:auto}
 @media (prefers-reduced-motion:reduce){#projects.in details.proj,details.proj[open] .pbody{animation:none}details.proj::details-content,.proj summary::after{transition:none}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes dotin{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(201,88,124,.4)}100%{box-shadow:0 0 0 14px rgba(201,88,124,0)}}
+@keyframes jobin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+#experience.in .tl::before{animation:grow 2s cubic-bezier(.22,.61,.36,1) backwards}
+#experience.in .job::before{animation:dotin .8s cubic-bezier(.22,.61,.36,1) backwards,ring 1.6s ease-out backwards;animation-delay:calc(var(--j)*.9s + .35s),calc(var(--j)*.9s + .95s)}
+#experience.in .job>h3,#experience.in .job>.meta,#experience.in .job li{animation:jobin 1s cubic-bezier(.22,.61,.36,1) backwards}
+#experience.in .job>h3{animation-delay:calc(var(--j)*.9s + .5s)}
+#experience.in .job>.meta{animation-delay:calc(var(--j)*.9s + .65s)}
+#experience.in .job li{animation-delay:calc(var(--j)*.9s + .8s + var(--n,0)*.12s)}
+.job li:nth-child(2){--n:1}.job li:nth-child(3){--n:2}.job li:nth-child(4){--n:3}
+@media (prefers-reduced-motion:reduce){#experience.in .tl::before,#experience.in .job::before,#experience.in .job>h3,#experience.in .job>.meta,#experience.in .job li{animation:none}}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chips span{background:var(--sky);color:var(--sky-d);border-radius:999px;padding:7px 16px;font-weight:600;font-size:15px}
 .chips span.b{background:var(--surface);color:var(--text)}
@@ -160,14 +174,14 @@ footer{max-width:1080px;margin:56px auto 0;padding:22px 20px 30px;border-top:1px
 <section id="experience">
 <h2>Experience</h2>
 <div class="tl">
-<div class="job"><h3>Executive, Business Development &amp; Product Management</h3><div class="meta"><strong class="co">B-trac Solutions (Bangla Trac Group)</strong> · Since August 2026</div>
+<div class="job" style="--j:0"><h3>Executive, Business Development &amp; Product Management</h3><div class="meta"><strong class="co">B-trac Solutions (Bangla Trac Group)</strong> · Since August 2026</div>
 <ul>
 <li>Work with the product management team to find gaps in products and market offerings, spot growth opportunities, and define product scope.</li>
 <li>Rank product ideas by market potential, feasibility, and business impact.</li>
 <li>Support business development for government projects with city corporations, Upazila Parishads, and Zila Parishads, from proposals to tenders.</li>
 <li>Prepare EOIs and LOIs and work with internal teams on B2B and B2C products.</li>
 </ul></div>
-<div class="job"><h3>Industrial Trainee</h3><div class="meta"><strong class="co">Grameenphone Ltd.</strong> · May to June 2025</div>
+<div class="job" style="--j:1"><h3>Industrial Trainee</h3><div class="meta"><strong class="co">Grameenphone Ltd.</strong> · May to June 2025</div>
 <ul><li>Worked across cybersecurity, network infrastructure, data analytics, and AI.</li></ul></div>
 </div>
 </section>
