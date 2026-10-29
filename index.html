@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Portfolio</title>
+<title>Nazifa Zahin Ifrit | Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fffaf4;--surface:#f6ebdf;--pink:#f6c9d6;--pink-d:#c9587c;--sky:#cfe9f7;--sky-d:#2f7fa8;--text:#3a2f33;--muted:#76676c;--line:#ecdcd0;
+:root{--bg:#fffaf4;--surface:#f6ebdf;--pink:#f6c9d6;--pink-d:#c9587c;--sky:#cfe9f7;--sky-d:#2f7fa8;--text:#3a2f33;--muted:#76676c;--line:#ecdcd0;--psoft:#fcf0f3;--pline:#f1d8e0;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1a1d;--surface:#2a2327;--pink:#5a3342;--pink-d:#f1a4bd;--sky:#25414f;--sky-d:#8fcbea;--text:#f5eaee;--muted:#b9a9af;--line:#3a3035;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#1f1a1d;--surface:#2a2327;--pink:#5a3342;--pink-d:#f1a4bd;--sky:#25414f;--sky-d:#8fcbea;--text:#f5eaee;--muted:#b9a9af;--line:#3a3035;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1a1d;--surface:#2a2327;--pink:#5a3342;--pink-d:#f1a4bd;--sky:#25414f;--sky-d:#8fcbea;--text:#f5eaee;--muted:#b9a9af;--line:#3a3035;--psoft:#33272d;--pline:#4b3943;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1f1a1d;--surface:#2a2327;--pink:#5a3342;--pink-d:#f1a4bd;--sky:#25414f;--sky-d:#8fcbea;--text:#f5eaee;--muted:#b9a9af;--line:#3a3035;--psoft:#33272d;--pline:#4b3943;color-scheme:dark}
 html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 "DM Sans",system-ui,sans-serif}
@@ -47,7 +47,7 @@ h1{font-size:clamp(40px,7vw,64px);letter-spacing:-.01em}
 .focus span{background:var(--pink);color:var(--pink-d);border-radius:999px;padding:6px 16px;font-weight:600;font-size:15px}
 .focus span+span{background:var(--sky);color:var(--sky-d)}
 .plist{display:grid;gap:14px}
-details.proj{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:0}
+details.proj{background:var(--psoft);border:1px solid var(--pline);border-radius:20px;padding:0}
 details.proj summary{cursor:pointer;list-style:none;padding:20px 24px;display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
 details.proj summary::-webkit-details-marker{display:none}
 details.proj summary::after{content:"+";font-size:26px;line-height:1;color:var(--pink-d);font-weight:500}
@@ -66,7 +66,7 @@ footer{max-width:920px;margin:56px auto 0;padding:22px 20px 30px;border-top:1px 
 </style>
 </head>
 <body>
-<header><div class="bar"><a class="logo" href="#top">Nazifa Zahin Ifrit</a>
+<header><div class="bar"><a class="logo" href="#top">Portfolio</a>
 <nav><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></div></header>
 
 <section class="hero" id="top">
@@ -82,7 +82,7 @@ footer{max-width:920px;margin:56px auto 0;padding:22px 20px 30px;border-top:1px 
 <section class="about" id="about">
 <h2>About me</h2>
 <p>I graduated in June 2026 with a B.Sc. in Computer Science and Engineering from the Military Institute of Science and Technology (MIST). My degree gave me a strong base in software, data, and AI. My work now sits on the business side, where I turn that background into product and market decisions.</p>
-<p>My interests are <strong>product management</strong> and <strong>applied AI and machine learning</strong>. I want to build AI-powered products that solve real problems, and to be the person who connects what users need, what the data can do, and what the business can deliver. My thesis and my projects in mental health and recruitment come from this interest.</p>
+<p>My interests are <strong>product management</strong> and <strong>applied AI and machine learning</strong>. I am drawn to the space where user needs, data, and business goals meet, and to understanding how AI can be applied well in real products. My thesis and my projects in mental health and recruitment come from this interest.</p>
 <div class="facts"><span>CGPA 3.91</span><span>Dean’s List, four years in a row</span><span>MIST Merit Scholarship, top five of 90 students</span></div>
 </section>
 
@@ -109,9 +109,9 @@ footer{max-width:920px;margin:56px auto 0;padding:22px 20px 30px;border-top:1px 
 <details class="proj"><summary><div><h3>Real vs. Fake Image Detection</h3><div class="when">2026 · Undergraduate thesis, MIST</div><p class="sum">A hybrid CNN–Transformer model that tells real images from AI-generated ones.</p></div></summary><div class="pbody"><ul><li>Designed, implemented, and defended the architecture as my undergraduate thesis.</li><li>Manuscript in preparation for journal submission.</li></ul><span class="tag">Deep learning</span><span class="tag">CNN–Transformer</span><span class="tag">Research</span></div></details>
 <details class="proj"><summary><div><h3>Career Climb</h3><div class="when">Dec 2024 – Mar 2025</div><p class="sum">An AI-driven recruitment platform for job seekers and employers.</p></div></summary><div class="pbody"><ul><li>Three AI-driven features: skill gap analysis, personalized career roadmaps, and upskilling recommendations.</li><li>Full-stack platform connecting job seekers and employers.</li></ul><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">TailwindCSS</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><br><a class="gh" href="https://github.com/ifwiit27/Career-Climb" target="_blank" rel="noopener">View on GitHub</a></div></details>
 <details class="proj"><summary><div><h3>Autism Compass</h3><div class="when">May 2024 – Oct 2024</div><p class="sum">A care platform for parents of children with special needs.</p></div></summary><div class="pbody"><ul><li>Role-based access for two user types: caregivers and doctors.</li><li>Self-assessment quizzes, appointment booking, and an autism-specific e-commerce module.</li></ul><span class="tag">React.js</span><span class="tag">Express.js</span><span class="tag">Node.js</span><span class="tag">Oracle</span><br><a class="gh" href="https://github.com/ifwiit27/Autism-Compass" target="_blank" rel="noopener">View on GitHub</a></div></details>
+<details class="proj"><summary><div><h3>PCOS Journey</h3><div class="when">May 2023 – Oct 2023</div><p class="sum">A desktop application connecting doctors and patients.</p></div></summary><div class="pbody"><ul><li>Two core tools: self-diagnosis quizzes and automated medicine reminders.</li><li>Built to support PCOS management.</li></ul><span class="tag">Java</span><span class="tag">JavaFX</span><br><a class="gh" href="https://github.com/ifwiit27/PCOS-Journey" target="_blank" rel="noopener">View on GitHub</a></div></details>
 <details class="proj"><summary><div><h3>Patient Health Monitoring System</h3><div class="when">2024</div><p class="sum">A real-time health monitoring system built on Arduino sensors.</p></div></summary><div class="pbody"><ul><li>Tracks four vital metrics: step count, body temperature, blood pressure, and oxygen level.</li><li>Live data visualization on a Next.js and WebSocket dashboard.</li></ul><span class="tag">Arduino</span><span class="tag">IoT sensors</span><span class="tag">Next.js</span><span class="tag">TailwindCSS</span><span class="tag">WebSocket</span></div></details>
 <details class="proj"><summary><div><h3>Smart Lab Access Control System</h3><div class="when">2025</div><p class="sum">A network-based design for secure and safe lab access.</p></div></summary><div class="pbody"><ul><li>Four subsystems: RFID-based access control, VPN remote connectivity, automated energy-saving lighting, and an emergency evacuation system.</li><li>The evacuation system includes real-time smoke detection and sprinkler activation.</li></ul><span class="tag">Cisco Packet Tracer</span><span class="tag">Python</span></div></details>
-<details class="proj"><summary><div><h3>PCOS Journey</h3><div class="when">May 2023 – Oct 2023</div><p class="sum">A desktop application connecting doctors and patients.</p></div></summary><div class="pbody"><ul><li>Two core tools: self-diagnosis quizzes and automated medicine reminders.</li><li>Built to support PCOS management.</li></ul><span class="tag">Java</span><span class="tag">JavaFX</span><br><a class="gh" href="https://github.com/ifwiit27/PCOS-Journey" target="_blank" rel="noopener">View on GitHub</a></div></details>
 </div>
 </section>
 
@@ -120,13 +120,13 @@ footer{max-width:920px;margin:56px auto 0;padding:22px 20px 30px;border-top:1px 
 <div class="chips">
 <span>Product management</span><span>Market research</span><span>Proposal writing</span><span>Data analysis</span><span>AI and machine learning</span>
 <span class="b">MS Excel</span><span class="b">MS Word</span><span class="b">Canva</span><span class="b">Figma</span><span class="b">Blender</span>
-<span class="b">React.js</span><span class="b">Node.js</span><span class="b">Flutter</span><span class="b">HTML</span><span class="b">CSS</span><span class="b">C++</span>
+<span class="b">React.js</span><span class="b">Node.js</span><span class="b">Flutter</span><span class="b">HTML</span><span class="b">CSS</span><span class="b">C++</span><span class="b">Python</span>
 </div>
 </section>
 
 <section class="contact" id="contact">
 <h2>Contact</h2>
-<p>I am looking for roles in <strong>product management</strong> and <strong>AI/ML</strong>, especially where AI-driven products meet real user and business problems. If you are hiring, building an AI product, or would like to talk about product and applied AI, I would be glad to hear from you.</p>
+<p>I am looking for roles in <strong>product management</strong> and <strong>AI/ML</strong>, especially where AI-driven products meet real user and business problems. If these interests match a role or a conversation, I would be glad to hear from you.</p>
 <div class="btns"><a class="btn main" href="mailto:zahin2296@gmail.com">zahin2296@gmail.com</a><a class="btn alt" href="https://www.linkedin.com/in/nazifa-zahin-ifrit-299a352bb/" target="_blank" rel="noopener">LinkedIn</a><a class="btn alt" href="https://github.com/ifwiit27" target="_blank" rel="noopener">GitHub</a></div>
 </section>
 
